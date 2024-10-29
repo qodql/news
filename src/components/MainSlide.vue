@@ -7,28 +7,27 @@
         :pagination="true" 
         :loop="true"
         class="mySwiper">
-        <swiper-slide v-for="article in articles" :key="article.id">
-          <div class="main-img" :style="{ backgroundImage: `url(${article.image_url})` }"></div>
-          <div class="main-title">
-            <article>
-              <h3>{{ article.title }}</h3>
-            </article>
-          </div>
-        </swiper-slide>
-      </swiper>
+            <swiper-slide v-for="article in articles" :key="article.id">
+            <div class="main-img" :style="{ backgroundImage: `url(${article.image_url})` }"></div>
+            <div class="main-title">
+                <article>
+                <h3>{{ article.title }}</h3>
+                </article>
+            </div>
+            </swiper-slide>
+        </swiper>
     </div>
-  </template>
+</template>
   
-    
-  <script>
-  import { Swiper, SwiperSlide } from 'swiper/vue';
-  import 'swiper/swiper-bundle.css';
-  import axios from 'axios';
+<script>
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/swiper-bundle.css';
+import axios from 'axios';
   
-  export default {
-    components: {
-      Swiper,
-      SwiperSlide,
+export default{
+    components:{
+        Swiper,
+        SwiperSlide,
     },
     data() {
       return {
@@ -49,7 +48,7 @@
       }
     }
   };
-  </script>
+</script>
   
 <style lang="scss">
   .main-slide {

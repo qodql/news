@@ -2,7 +2,7 @@
   <nav>
     <button class="main-menu"></button>
     <div class="dropdown">
-      <button class="main-dropdown" @click="toggleDropdown">{{ dropdownText }}</button>
+      <button class="main-dropdown" @click="toggleDropdown">{{ dropdownText }} <img src="../public/img/icon/icon_dropdown_down.svg"></button>
       <div v-if="dropdownVisible" class="dropdown-menu">
         <button @click="selectDomesticNews">국내 뉴스</button>
         <button @click="selectGlobalNews">해외 뉴스</button>
@@ -13,9 +13,12 @@
     </router-link>
   </nav>
   <router-view :selectedCategory="selectedCategory"/>
+  <FooterView/>
 </template>
 
 <script>
+import FooterView from '@/components/FooterView.vue';
+
 export default {
   name: 'App',
   data() {
@@ -24,6 +27,9 @@ export default {
       selectedCategory: 'articles',
       dropdownText: '국내',
     };
+  },
+  components: {
+    FooterView
   },
   methods: {
     toggleDropdown() {
@@ -71,7 +77,6 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   .main-menu {
     width: 20px;
     height: 20px;
@@ -93,6 +98,9 @@ nav {
       text-decoration: none;
       background-color: transparent;
       border: none;
+      display: flex;
+      align-items: center;
+      gap: 4px;
     }
     .dropdown-menu {
       width: 80px;
@@ -103,7 +111,6 @@ nav {
       border-radius: 4px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       z-index: 10;
-
       button {
         width: 100%;
         display: block;
