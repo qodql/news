@@ -8,7 +8,6 @@
                 <button @click="tabName = 'politics'; apiRequest()" :class="{ active: tabName === 'politics' }">정치</button>
                 <button @click="tabName = 'entertainment'; apiRequest()" :class="{ active: tabName === 'entertainment' }">연예</button>
             </div>
-            
             <div class="domestic-contents">
                 <div v-if="tabName === 'all'">
                     <div v-for='v in filteredItems' :key='v.id' class="domestic-content" @click="moveDetail(v)">
@@ -105,7 +104,7 @@ export default {
         moveDetail(article)  {
             this.$router.push({
                 name: 'DetailView',
-                params: { id: article.id }
+                params: { id: article.id, m: this.m }
             });
         }
     }

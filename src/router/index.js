@@ -24,10 +24,9 @@ const routes = [
     component: SearchList
   },
   {
-    path: '/detail/:id',
+    path: '/detail/:id/:m',
     name: 'DetailView',
-    component: DetailView,
-    props: route => ({ article: route.params.article })
+    component: DetailView
   }
 ]
 
