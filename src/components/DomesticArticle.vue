@@ -95,7 +95,7 @@ export default {
         async apiRequest() {
             const s = this.tabName === 'all' ? 'economy,culture,politics,entertainment' : this.tabName;
             try {
-                const res = await axios.get(`http://localhost:4000/news?m=${this.m}&s=${s}`);
+                const res = await axios.get(`https://react-server-ykb.vercel.app/news?m=${this.m}&s=${s}`);
                 console.log(res.data);
                 this.item = res.data.data;
             } catch (error) {

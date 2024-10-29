@@ -2,7 +2,7 @@
   <nav>
     <button class="main-menu"></button>
     <div class="dropdown">
-      <button class="main-dropdown" @click="toggleDropdown">국내</button>
+      <button class="main-dropdown" @click="toggleDropdown">{{ dropdownText }}</button>
       <div v-if="dropdownVisible" class="dropdown-menu">
         <button @click="selectDomesticNews">국내 뉴스</button>
         <button @click="selectGlobalNews">해외 뉴스</button>
@@ -22,6 +22,7 @@ export default {
     return {
       dropdownVisible: false,
       selectedCategory: 'articles',
+      dropdownText: '국내',
     };
   },
   methods: {
@@ -30,10 +31,12 @@ export default {
     },
     selectDomesticNews() {
       this.selectedCategory = 'articles';
+      this.dropdownText = '국내';
       this.dropdownVisible = false;
     },
     selectGlobalNews() {
       this.selectedCategory = 'global-articles';
+      this.dropdownText = '해외';
       this.dropdownVisible = false;
     },
   },

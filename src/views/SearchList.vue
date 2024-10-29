@@ -34,7 +34,7 @@ export default {
             if (!this.keyword) return;
 
             try {
-                const res = await axios.get(`http://localhost:4000/news/search?m=${m}&keyword=${this.keyword}`);
+                const res = await axios.get(`https://react-server-ykb.vercel.app/news/search?m=${m}&keyword=${this.keyword}`);
                 console.log(res.data);
                 this.item = res.data.data;
             } catch (error) {

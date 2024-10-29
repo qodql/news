@@ -1,52 +1,100 @@
-<template lang="">
+<template>
     <div class="main-slide">
-        <div class="main-img"></div>
-        <div class="main-title">
+      <swiper 
+        :slides-per-view="1.2" 
+        :space-between="32" 
+        :centered-slides="true" 
+        :pagination="true" 
+        :loop="true"
+        class="mySwiper">
+        <swiper-slide v-for="article in articles" :key="article.id">
+          <div class="main-img" :style="{ backgroundImage: `url(${article.image_url})` }"></div>
+          <div class="main-title">
             <article>
-                <h3>[1보] 오태완 의령군수·이장우 경남도의원 항소심 불복, 대법원 상고</h3>
+              <h3>{{ article.title }}</h3>
             </article>
-        </div>
+          </div>
+        </swiper-slide>
+      </swiper>
     </div>
-</template>
-<script>
-export default {
+  </template>
+  
     
-}
-</script>
-<style lang="scss">
-    .main-slide{
-        width: 100%;
-        height: 100%;
-        position: relative;
-        &::after {
-            width: calc(100% + 32px);
-            height: 6px;
-            margin-left: -16px;
-            margin-right: -16px;
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            background-color: #f2f2f2;
+  <script>
+  import { Swiper, SwiperSlide } from 'swiper/vue';
+  import 'swiper/swiper-bundle.css';
+  import axios from 'axios';
+  
+  export default {
+    components: {
+      Swiper,
+      SwiperSlide,
+    },
+    data() {
+      return {
+        articles: [],
+      };
+    },
+    created() {
+      this.fetchArticles();
+    },
+    methods: {
+      async fetchArticles() {
+        try {
+          const response = await axios.get('https://react-server-ykb.vercel.app/news?m=articles&s=culture');
+          this.articles = response.data.data;
+        } catch (error) {
+          console.error('Error fetching articles:', error);
         }
-        .main-img{
-            width: calc(100% + 32px);
-            height: 240px;
-            background: url('../../public/img/main-slide01.jpg') no-repeat center;
-            margin-left: -16px;
-            margin-right: -16px;
-        }
-        .main-title{
-            width: 100%;
-            article{
-                padding: 20px 0;
-                h3{
-                    font-size: 18px;
-                    font-weight: 600;
-                    color: #111;
-                    word-break: keep-all;
-                }
-            }
-        }
+      }
     }
-</style>
+  };
+  </script>
+  
+<style lang="scss">
+  .main-slide {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      &::after {
+          width: calc(100% + 32px);
+          height: 6px;
+          margin-left: -16px;
+          margin-right: -16px;
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          background-color: #f2f2f2;
+      }
+      .swiper-slide-prev, .swiper-slide-next {
+        transition: 0.3s;
+        position: relative;
+          .main-img {
+            position: absolute;
+            top: 20px;
+            height: 220px;
+          }
+      }
+      .main-img {
+          width: 100%;
+          height: 240px;
+          background: url('../../public/img/main-slide01.jpg') no-repeat center;
+          background-size: cover;
+          background-position: center;
+      }
+      .main-title {
+          width: 100%;
+          article {
+              padding: 20px 0;
+              h3 {
+                  font-size: 18px;
+                  font-weight: 600;
+                  color: #111;
+                  word-break: keep-all;
+              }
+          }
+      }
+  }
+  </style>
+  
