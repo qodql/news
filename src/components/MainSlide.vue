@@ -2,7 +2,7 @@
     <div class="main-slide">
       <swiper 
         :slides-per-view="1.2" 
-        :space-between="32" 
+        :space-between="16" 
         :centered-slides="true" 
         :pagination="true" 
         :loop="true"
@@ -68,7 +68,7 @@
           background-color: #f2f2f2;
       }
       .swiper-slide-prev, .swiper-slide-next {
-        transition: 0.3s;
+        transition: 0.5s;
         position: relative;
           .main-img {
             position: absolute;
@@ -82,6 +82,8 @@
           background: url('../../public/img/main-slide01.jpg') no-repeat center;
           background-size: cover;
           background-position: center;
+          border-radius: 4px;
+          
       }
       .main-title {
           width: 100%;
