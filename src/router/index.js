@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import SearchList from "@/views/SearchList.vue";
+import DetailView from "@/views/DetailView.vue";
 
 
 const routes = [
@@ -21,8 +22,13 @@ const routes = [
     path:'/search',
     name:'search',
     component: SearchList
+  },
+  {
+    path: '/detail/:id',
+    name: 'DetailView',
+    component: DetailView,
+    props: route => ({ article: route.params.article })
   }
-  
 ]
 
 const router = createRouter({

@@ -25,6 +25,7 @@ import 'swiper/swiper-bundle.css';
 import axios from 'axios';
   
 export default{
+    name: 'MainSlide',
     components:{
         Swiper,
         SwiperSlide,
@@ -78,11 +79,9 @@ export default{
       .main-img {
           width: 100%;
           height: 240px;
-          background: url('../../public/img/main-slide01.jpg') no-repeat center;
           background-size: cover;
           background-position: center;
           border-radius: 4px;
-          
       }
       .main-title {
           width: 100%;

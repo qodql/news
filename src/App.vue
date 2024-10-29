@@ -1,6 +1,8 @@
 <template>
   <nav>
-    <button class="main-menu"></button>
+    <router-link to="/">
+      <button class="main-logo"></button>
+    </router-link>
     <div class="dropdown">
       <button class="main-dropdown" @click="toggleDropdown">{{ dropdownText }} <img src="../public/img/icon/icon_dropdown_down.svg"></button>
       <div v-if="dropdownVisible" class="dropdown-menu">
@@ -70,26 +72,32 @@ html, body {
   padding: 0 16px;
   margin: 0 auto;
 }
-
 nav {
   width: 100%;
   padding: 24px 0 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  .main-menu {
-    width: 20px;
-    height: 20px;
-    background: url('../public/img/icon/icon_menu.svg') no-repeat center;
-    border: none;
+  a{
+    display: flex;
+    .main-logo {
+      width: 80px;
+      height: 20px;
+      background: url('../public/img/news_logo.svg') no-repeat center;
+      border: none;
+    }
   }
   .main-search {
     width: 20px;
     height: 20px;
+    margin-left: 60px;
     background: url('../public/img/icon/icon_search.svg') no-repeat center;
     border: none;
   }
   .dropdown {
+    width: 60px;
+    display: flex;
+    justify-content: center;
     position: relative;
     .main-dropdown {
       font-size: 20px;
@@ -105,7 +113,8 @@ nav {
     .dropdown-menu {
       width: 80px;
       position: absolute;
-      left: -20px;
+      top: 30px;
+      left: -15px;
       background-color: #fff;
       border: 1px solid #ccc;
       border-radius: 4px;

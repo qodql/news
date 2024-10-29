@@ -11,7 +11,7 @@
             
             <div class="domestic-contents">
                 <div v-if="tabName === 'all'">
-                    <div v-for='v in filteredItems' :key='v.id' class="domestic-content">
+                    <div v-for='v in filteredItems' :key='v.id' class="domestic-content" @click="moveDetail(v)">
                         <figure>
                             <img :src="v.thumbnail_url" alt="domestic-img"/>
                         </figure>
@@ -101,6 +101,12 @@ export default {
             } catch (error) {
                 console.error('API 요청 오류:', error);
             }
+        },
+        moveDetail(article)  {
+            this.$router.push({
+                name: 'DetailView',
+                params: { id: article.id }
+            });
         }
     }
 }
@@ -168,5 +174,4 @@ export default {
     }
 }
 
-    
 </style>
