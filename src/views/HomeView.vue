@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <MainSlide />
+    <MainSlide :m="selectedCategory"/>
     <DomesticArticle :m="selectedCategory" />
   </div>
 </template>

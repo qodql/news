@@ -30,10 +30,20 @@ export default{
         Swiper,
         SwiperSlide,
     },
+    props: ['m'],
     data() {
       return {
         articles: [],
+        selectedArticle: null
       };
+    },
+    watch:{
+      m:{
+        immediate: true,
+        handler(){
+          this.fetchArticles();
+        }
+      }
     },
     created() {
       this.fetchArticles();
@@ -41,7 +51,7 @@ export default{
     methods: {
       async fetchArticles() {
         try {
-          const response = await axios.get('https://react-server-ykb.vercel.app/news?m=articles&s=culture');
+          const response = await axios.get(`https://react-server-ykb.vercel.app/news?m=${this.m}&s=culture`);
           this.articles = response.data.data;
         } catch (error) {
           console.error('Error fetching articles:', error);
