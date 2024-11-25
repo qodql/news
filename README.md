@@ -1,20 +1,20 @@
 <div align="left">
 <!-- logo -->
-<p><img src="https://github.com/qodql/news/blob/main/public/news_logo.svg" width="200" height="130"/></p>
-<img src="https://github.com/qodql/news/blob/main/public/readme/icon-project-html.svg"/>
-<img src="https://github.com/qodql/news/blob/main/public/readme/icon-project-css.svg"/>
-<img src="https://github.com/qodql/news/blob/main/public/readme/icon-project-sass.svg"/>
-<img src="https://github.com/qodql/news/blob/main/public/readme/icon-project-figma.svg"/>
-<img src="https://github.com/qodql/news/blob/main/public/readme/icon-project-swiper.svg"/>
-<img src="https://github.com/qodql/news/blob/main/public/readme/icon-project-mui2.svg"/>
-<img src="https://github.com/qodql/news/blob/main/public/readme/icon-project-js.svg"/>
-<img src="https://github.com/qodql/news/blob/main/public/readme/icon-project-next.svg"/>
-<img src="https://github.com/qodql/news/blob/main/public/readme/icon-project-react.svg"/>
-<img src="https://github.com/qodql/news/blob/main/public/readme/icon-project-firebase.svg"/>
-<img src="https://github.com/qodql/news/blob/main/public/readme/icon-project-firestore.svg"/>
-<img src="https://github.com/qodql/news/blob/main/public/readme/icon-project-zustand.svg"/>
-<img src="https://github.com/qodql/news/blob/main/public/readme/icon-project-vercel.svg"/>
-<img src="https://github.com/qodql/news/blob/main/public/readme/icon-project-git.svg"/>
+<p><img src="https://github.com/qodql/news/blob/main/public/img/news_logo.svg" width="200" height="130"/></p>
+<img src="https://github.com/qodql/news/blob/main/public/img/readme/icon-project-html.svg"/>
+<img src="https://github.com/qodql/news/blob/main/public/img/readme/icon-project-css.svg"/>
+<img src="https://github.com/qodql/news/blob/main/public/img/readme/icon-project-sass.svg"/>
+<img src="https://github.com/qodql/news/blob/main/public/img/readme/icon-project-figma.svg"/>
+<img src="https://github.com/qodql/news/blob/main/public/img/readme/icon-project-swiper.svg"/>
+<img src="https://github.com/qodql/news/blob/main/public/img/readme/icon-project-mui2.svg"/>
+<img src="https://github.com/qodql/news/blob/main/public/img/readme/icon-project-js.svg"/>
+<img src="https://github.com/qodql/news/blob/main/public/img/readme/icon-project-next.svg"/>
+<img src="https://github.com/qodql/news/blob/main/public/img/readme/icon-project-react.svg"/>
+<img src="https://github.com/qodql/news/blob/main/public/img/readme/icon-project-firebase.svg"/>
+<img src="https://github.com/qodql/news/blob/main/public/img/readme/icon-project-firestore.svg"/>
+<img src="https://github.com/qodql/news/blob/main/public/img/readme/icon-project-zustand.svg"/>
+<img src="https://github.com/qodql/news/blob/main/public/img/readme/icon-project-vercel.svg"/>
+<img src="https://github.com/qodql/news/blob/main/public/img/readme/icon-project-git.svg"/>
 </div> 
 
 ## 📝 프로젝트 소개
@@ -29,10 +29,10 @@
 <br />
 
 ## 🖥 화면 구성
-<img src="https://github.com/qodql/news/blob/main/public/readme/img-project04.jpg">
+<img src="https://github.com/qodql/news/blob/main/public/img/readme/img-project04.jpg">
 
 ## ⚙ 기술 스택
-이 프로젝트는 다양한 최신 기술을 활용하여 구현되었습니다.
+이 프로젝트는 Vue.js기반 애플리케이션입니다.
 
 - **VUE.js**: 프론트엔드 프레임워크, 컴포넌트 기반 UI를 구현
 - **Axios**: API 통신을 위한 HTTP 클라이언트
