@@ -7,7 +7,10 @@
 <img src="https://github.com/qodql/news/blob/main/public/img/readme/icon-project-figma.svg"/>
 <img src="https://github.com/qodql/news/blob/main/public/img/readme/icon-project-swiper.svg"/>
 <img src="https://github.com/qodql/news/blob/main/public/img/readme/icon-project-js.svg"/>
-<img src="https://github.com/qodql/news/blob/main/public/img/readme/icon-project-react.svg"/>
+<img src="https://github.com/qodql/news/blob/main/public/img/readme/icon-project-vue.svg"/>
+<img src="https://github.com/qodql/news/blob/main/public/img/readme/icon-project-vuex.svg"/>
+<img src="https://github.com/qodql/news/blob/main/public/img/readme/icon-project-express.svg"/>
+<img src="https://github.com/qodql/news/blob/main/public/img/readme/icon-project-node.svg"/>
 <img src="https://github.com/qodql/news/blob/main/public/img/readme/icon-project-vercel.svg"/>
 <img src="https://github.com/qodql/news/blob/main/public/img/readme/icon-project-git.svg"/>
 </div> 
