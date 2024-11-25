@@ -10,7 +10,9 @@
         <button @click="selectGlobalNews">해외 뉴스</button>
       </div>
     </div>
-    <router-link to="/search">
+    <router-link
+      :to="{ path: '/search', query: { m: selectedCategory } }"
+    >
       <button class="main-search"></button>
     </router-link>
   </nav>

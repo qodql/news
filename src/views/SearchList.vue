@@ -21,20 +21,31 @@ import axios from 'axios';
 
 export default {
     name: 'SearchList',
+    props: ['m'],
     data() {
         return {
             keyword: '',
             item: [],
+            selectedArticle: null
         };
+    },
+    watch:{
+      m:{
+        immediate: true,
+        handler(){
+            console.log(this.m);
+          this.searchArticles();
+        }
+      }
     },
     methods: {
         async searchArticles() {
-            const m = 'articles';
+            //const m = this.m;
 
             if (!this.keyword) return;
 
             try {
-                const res = await axios.get(`https://react-server-ykb.vercel.app/news/search?m=${m}&keyword=${this.keyword}`);
+                const res = await axios.get(`https://react-server-ykb.vercel.app/news/search?m=${this.m}&keyword=${this.keyword}`);
                 console.log(res.data);
                 this.item = res.data.data;
             } catch (error) {

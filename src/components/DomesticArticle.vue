@@ -18,7 +18,6 @@
           </div>
         </div>
       </div>
-  
       <Modal v-if="isModalOpen" :article="selectedArticle" @close="isModalOpen = false" />
     </div>
 </template>
