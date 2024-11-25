@@ -6,13 +6,8 @@
 <img src="https://github.com/qodql/news/blob/main/public/img/readme/icon-project-sass.svg"/>
 <img src="https://github.com/qodql/news/blob/main/public/img/readme/icon-project-figma.svg"/>
 <img src="https://github.com/qodql/news/blob/main/public/img/readme/icon-project-swiper.svg"/>
-<img src="https://github.com/qodql/news/blob/main/public/img/readme/icon-project-mui2.svg"/>
 <img src="https://github.com/qodql/news/blob/main/public/img/readme/icon-project-js.svg"/>
-<img src="https://github.com/qodql/news/blob/main/public/img/readme/icon-project-next.svg"/>
 <img src="https://github.com/qodql/news/blob/main/public/img/readme/icon-project-react.svg"/>
-<img src="https://github.com/qodql/news/blob/main/public/img/readme/icon-project-firebase.svg"/>
-<img src="https://github.com/qodql/news/blob/main/public/img/readme/icon-project-firestore.svg"/>
-<img src="https://github.com/qodql/news/blob/main/public/img/readme/icon-project-zustand.svg"/>
 <img src="https://github.com/qodql/news/blob/main/public/img/readme/icon-project-vercel.svg"/>
 <img src="https://github.com/qodql/news/blob/main/public/img/readme/icon-project-git.svg"/>
 </div> 
