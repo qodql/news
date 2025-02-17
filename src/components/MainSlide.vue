@@ -1,52 +1,53 @@
 <template>
     <div class="main-slide">
-      <swiper 
-        :slides-per-view="1.2" 
-        :space-between="16" 
-        :centered-slides="true" 
-        :pagination="true" 
+      <swiper
+        :slides-per-view="1.2"
+        :space-between="16"
+        :centered-slides="true"
         :loop="true"
-        class="mySwiper">
-            <swiper-slide v-for="article in articles" :key="article.id">
-            <div class="main-img" :style="{ backgroundImage: `url(${article.image_url})` }"></div>
-            <div class="main-title">
-                <article>
-                  <h3>{{ article.title }}</h3>
-                </article>
-            </div>
-            </swiper-slide>
-        </swiper>
+        :pagination="{ clickable: true }"
+        :autoplay="{ delay: 6000 }"
+        class="mySwiper"
+        :modules="modules"
+        v-if="articles.length"
+      >
+        <swiper-slide v-for="article in articles" :key="article.id">
+          <div class="main-img" :style="{ backgroundImage: `url(${article.image_url})` }"></div>
+          <div class="main-title">
+            <article>
+              <h3>{{ article.title }}</h3>
+            </article>
+          </div>
+        </swiper-slide>
+      </swiper>
     </div>
 </template>
-  
+
 <script>
 import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
 import axios from 'axios';
-  
-export default{
+
+export default {
     name: 'MainSlide',
-    components:{
-        Swiper,
-        SwiperSlide,
+    components: {
+      Swiper,
+      SwiperSlide,
     },
     props: ['m'],
     data() {
       return {
         articles: [],
-        selectedArticle: null
       };
     },
-    watch:{
-      m:{
+    watch: {
+      m: {
         immediate: true,
-        handler(){
+        handler() {
           this.fetchArticles();
         }
       }
-    },
-    created() {
-      this.fetchArticles();
     },
     methods: {
       async fetchArticles() {
@@ -57,15 +58,27 @@ export default{
           console.error('Error fetching articles:', error);
         }
       }
-    }
-  };
+    },
+    setup() {
+      return {
+        modules: [Pagination, Autoplay],
+      };
+    },
+};
 </script>
-  
+
 <style lang="scss">
   .main-slide{
     width: 100%;
     height: 100%;
     position: relative;
+    .swiper-pagination{
+      bottom: 100px !important;
+      .swiper-pagination-bullet{
+        width: 6px;
+        height: 6px;
+      }
+    }
     &::after{
       width: calc(100% + 32px);
       height: 6px;
@@ -82,8 +95,6 @@ export default{
       position: relative;
       .main-img {
         position: absolute;
-        top: 20px;
-        height: 220px;
       }
     }
     .main-img{
